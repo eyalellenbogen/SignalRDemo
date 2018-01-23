@@ -1,0 +1,78 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    touch-action: none;
+}
+
+#canvas {
+    display: block;
+    margin: auto;
+    position: absolute;
+}
+
+.controls {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+}
+
+.controls:after{
+    display: table;
+    clear:both;
+    float:none;
+    content:'';
+}
+
+.controls * {
+    float: left;
+    margin-right: 20px;
+}
+
+.controls *:last-child {
+    margin-right: 0;
+}
+
+.controls button {
+    border: none;
+    outline: none;
+    background: #f4f4f4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px #333;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #666;
+    margin-top:5px;
+}
+
+.controls button:active {
+    background-color: #fff;
+    box-shadow: 0px 0px 1px #333;
+}
+
+.controls button.brush {
+    width: 50px;
+    height: 50px;
+    margin-top:0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 8px #333;
+    position: relative;
+    cursor: pointer;
+}
+
+.controls .brush .dot {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    transition: all 0.2s;
+}

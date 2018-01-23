@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SignalR demo</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="icomoon.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="/node_modules/chroma-js/chroma.min.js"></script>
+    <script src="/node_modules/@aspnet/signalr-client/dist/browser/signalr-client-1.0.0-alpha2-final.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+
+<body>
+    <div class="controls">
+        <button class="less icon-minus" onclick="setThickness(false);"></button>
+        <button class="brush" onclick="setColor()">
+            <span class="dot"></span>
+        </button>
+        <button class="more icon-plus" onclick="setThickness(true)"></button>
+    </div>
+    <canvas id="canvas">
+
+    </canvas>
+</body>
+
+</html>
