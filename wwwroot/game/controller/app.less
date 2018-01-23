@@ -1,0 +1,77 @@
+@buttonSize: 80px;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  touch-action: manipulation;
+}
+
+.pad {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  .controller {
+    width: ~"calc(100% - 150px)";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    .target {
+      position: absolute;
+      top: 50%;
+      left: 200px;
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    margin-top: -58px;
+    padding: 0 20px 0 0;
+
+    button {
+      border: 1px solid #71afff;
+      border-radius: 50%;
+      width: @buttonSize;
+      height: @buttonSize;
+      background: none;
+      outline: none;
+      box-shadow: 3px 3px 8px #71afff;
+      font-size: 32px;
+      color: #71afff;
+      line-height: @buttonSize;
+      transition: all .2s;
+      position: absolute;
+
+      &:active {
+        box-shadow: 1px 1px 1px #71afff;
+      }
+
+      &.fire-a {
+        right: 0;
+        top: 0;
+      }
+
+      &.fire-b {
+        right: @buttonSize + 20px;
+        top: 0;
+      }
+
+      &.shield {
+        right: @buttonSize*0.5 + 10px;
+        top: @buttonSize + 10px;
+      }
+
+    }
+  }
+}

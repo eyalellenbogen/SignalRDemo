@@ -49,6 +49,7 @@ namespace SignalRDemo
             app.UseSignalR(routes =>
             {
                 routes.MapHub<Hubs.SketchHub>("sketch");
+                routes.MapHub<Hubs.GameHub>("asteroids");
             });
         }
     }
